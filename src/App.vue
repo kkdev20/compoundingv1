@@ -68,12 +68,20 @@
               />
             </div>
 
-            <button
-              @click="hitung"
-              class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-all duration-200 mt-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
-              Hitung
-            </button>
+            <div class="flex gap-2 mt-2">
+              <button
+                @click="hitung"
+                class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Hitung
+              </button>
+              <button
+                @click="reset"
+                class="px-4 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg text-sm transition-all duration-200 shadow-md hover:shadow-lg"
+              >
+                Reset
+              </button>
+            </div>
           </div>
         </div>
 
@@ -253,6 +261,13 @@ export default {
       }
     }
 
+    const reset = () => {
+      modal.value = 100000
+      persentase.value = 5
+      periode.value = 10
+      hasil.value = []
+    }
+
     return {
       modal,
       persentase,
@@ -266,7 +281,8 @@ export default {
       formatNumber,
       handleModalInput,
       formatCurrency,
-      hitung
+      hitung,
+      reset
     }
   }
 }
