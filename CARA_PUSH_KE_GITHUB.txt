@@ -1,0 +1,102 @@
+═══════════════════════════════════════════════════════════
+   CARA PUSH CODE KE GITHUB - PILIH SALAH SATU CARA
+═══════════════════════════════════════════════════════════
+
+CARA 1: GITHUB DESKTOP (PALING MUDAH - TIDAK PERLU COMMAND LINE)
+═══════════════════════════════════════════════════════════
+
+Langkah 1: Download GitHub Desktop
+   • Buka: https://desktop.github.com/
+   • Klik "Download for Windows"
+   • Install file yang didownload
+
+Langkah 2: Login ke GitHub Desktop
+   • Buka GitHub Desktop
+   • Klik "Sign in to GitHub.com"
+   • Login dengan:
+     - Email: kuswiono.2013@gmail.com
+     - Password: (password GitHub Anda)
+
+Langkah 3: Publish Repository
+   • Di GitHub Desktop, klik menu "File" → "Add Local Repository"
+   • Atau klik "File" → "Options" → "Add"
+   • Browse ke folder: C:\Users\n\Downloads\compouding
+   • Klik "Add repository"
+   
+   • Setelah repository ditambahkan, klik tombol "Publish repository"
+   • Isi:
+     - Name: compoundingv1
+     - Description: (kosongkan atau isi sesuai keinginan)
+     - ✅ Keep this code private (hapus centang jika ingin public)
+   • Klik "Publish Repository"
+   
+   • Selesai! Code sudah di GitHub
+
+
+CARA 2: INSTALL GIT & GUNAKAN COMMAND LINE
+═══════════════════════════════════════════════════════════
+
+Langkah 1: Install Git
+   • Download dari: https://git-scm.com/download/win
+   • Double-click file installer
+   • Klik "Next" terus sampai selesai (gunakan default settings)
+   • Restart Command Prompt/PowerShell
+
+Langkah 2: Buka Command Prompt atau PowerShell
+   • Tekan Windows + R
+   • Ketik: cmd atau powershell
+   • Tekan Enter
+
+Langkah 3: Pindah ke folder project
+   • Ketik: cd C:\Users\n\Downloads\compouding
+   • Tekan Enter
+
+Langkah 4: Jalankan perintah berikut (copy paste satu per satu):
+   
+   git init
+   
+   git remote add origin https://github.com/kkdev20/compoundingv1.git
+   
+   git add .
+   
+   git commit -m "Initial commit: Compounding Interest Calculator"
+   
+   git branch -M main
+   
+   git push -u origin main
+
+   • Saat push, akan diminta username dan password
+   • Username: kuswiono.2013@gmail.com
+   • Password: (gunakan Personal Access Token, bukan password biasa)
+     * Cara buat token: https://github.com/settings/tokens
+     * Klik "Generate new token (classic)"
+     * Centang "repo"
+     * Klik "Generate token"
+     * Copy token dan gunakan sebagai password
+
+
+CARA 3: UPLOAD MANUAL VIA WEB (TIDAK DISARANKAN)
+═══════════════════════════════════════════════════════════
+
+1. Buka: https://github.com/kkdev20/compoundingv1
+2. Jika repository masih kosong, akan ada pesan "uploading an existing file"
+3. Klik "uploading an existing file"
+4. Drag & drop file-file berikut:
+   - Folder src/ (beserta isinya)
+   - index.html
+   - package.json
+   - vite.config.js
+   - tailwind.config.js
+   - postcss.config.js
+   - vercel.json
+   - .gitignore
+   - README.md
+5. Scroll ke bawah, isi commit message: "Initial commit"
+6. Klik "Commit changes"
+
+
+═══════════════════════════════════════════════════════════
+   REKOMENDASI: GUNAKAN CARA 1 (GitHub Desktop)
+   Lebih mudah, tidak perlu command line, GUI friendly
+═══════════════════════════════════════════════════════════
+
